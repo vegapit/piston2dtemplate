@@ -1,0 +1,17 @@
+[package]
+name = "piston2dtemplate"
+version = "0.1.0"
+authors = ["Vegapit <info@vegapit.com>"]
+edition = "2018"
+
+[[example]]
+name = "pong"
+
+[[example]]
+name = "mandelbrot"
+
+[dependencies]
+rand = "0.4"
+num = "0.2"
+image = "0.22"
+piston_window = "0.103"
