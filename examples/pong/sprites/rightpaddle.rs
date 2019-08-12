@@ -1,7 +1,7 @@
 use piston_window::*;
 use piston2dtemplate::{Sprite2d, Screen};
 
-const WHITE: [f32; 4] = [1.0, 1.0, 1.0, 1.0];
+const RED: [f32; 4] = [0.8, 0.0, 0.0, 1.0];
 
 pub struct RightPaddle{
     pub pos: f64,
@@ -16,7 +16,7 @@ impl Sprite2d for RightPaddle {
     
     fn render(&self, _: &mut Glyphs, ctx: &Context, g: &mut G2d) {
         let shape = rectangle::rectangle_by_corners(self.screen_width-self.width,0.0,self.screen_width,self.height);
-        rectangle(WHITE, shape, ctx.transform.trans(0.0,self.pos), g);
+        rectangle(RED, shape, ctx.transform.trans(0.0,self.pos), g);
     }
 
 }

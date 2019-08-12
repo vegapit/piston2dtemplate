@@ -74,26 +74,26 @@ impl Game2d for Mandelbrot {
     fn press(&mut self, btn: &Button) {
         if let &Button::Keyboard(key) = btn {
             match key {
-                Key::PageDown => {
-                    self.zoom *= 2.0
-                },
                 Key::PageUp => {
                     self.zoom /= 2.0;
                     if self.zoom < 1.0 {
                         self.zoom = 1.0;
                     }
-                },
-                Key::Right => {
-                    self.x_shift += 1.0 / self.zoom;
-                },
-                Key::Left => {
-                    self.x_shift -= 1.0 / self.zoom;
+                },                
+                Key::PageDown => {
+                    self.zoom *= 2.0
                 },
                 Key::Up => {
                     self.y_shift -= 1.0 / self.zoom;
                 },
                 Key::Down => {
                     self.y_shift += 1.0 / self.zoom;
+                },
+                Key::Right => {
+                    self.x_shift += 1.0 / self.zoom;
+                },
+                Key::Left => {
+                    self.x_shift -= 1.0 / self.zoom;
                 },
                 _ => () 
             }
@@ -103,9 +103,10 @@ impl Game2d for Mandelbrot {
     fn release(&mut self, btn: &Button) {
         if let &Button::Keyboard(key) = btn {
             match key {
-                _ => {
+                Key::PageUp | Key::PageDown | Key::Up | Key::Down | Key::Right | Key ::Left => {
                     self.generate_texture();
-                }
+                },
+                _ => ()
             }
         }
     }
