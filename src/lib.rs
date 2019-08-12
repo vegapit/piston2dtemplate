@@ -18,7 +18,7 @@ pub trait Game2d {
     fn reset(&mut self);
 }
 
-pub fn run<'a, T: Game2d>(mut window: PistonWindow, game: &'a mut T, glyphs: &mut Glyphs, bgcolor: [f32;4]) {
+pub fn run<T: Game2d>(mut window: PistonWindow, game: &mut T, glyphs: &mut Glyphs, bgcolor: [f32;4]) {
     let eventsettings = EventSettings::new().ups(60);
     let mut events = Events::new( eventsettings );
     // Event loop
