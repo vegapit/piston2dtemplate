@@ -16,6 +16,6 @@ This app enables you to visualise the [Mandelbrot Set](https://en.wikipedia.org/
 
 `cargo run --release --example pong`
 
-This game probably does not require any intorduction. This is a best-out-of-five 2 player version which can give you a basic understanding on how to implement sprites in Piston.
+This game probably does not require any introduction. This is a best-out-of-five 2 player version which can give you a basic understanding on how to implement sprites in Piston.
 
  ![pong](./pong.png)
