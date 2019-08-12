@@ -1,6 +1,6 @@
 # Piston2dTemplate
 
-This small library intends to be a code template to quickly develop small apps and games using the [Piston game Engine](https://github.com/PistonDevelopers/piston). The project comprises 2 examples on how to use it:
+This small library intends to be a coding template to quickly develop small apps and games using the [Piston game Engine](https://github.com/PistonDevelopers/piston). The project comprises 2 examples which show how to use it:
 
 1. Mandelbrot Set Browser
 
